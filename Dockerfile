@@ -1,2 +1,2 @@
 FROM tomcat:8
-COPY target/*.html /var/lib/jenkins/workspace/Group Project/dockeransible.war
+COPY target/*.html /var/lib/jenkins/workspace/Group Project/
