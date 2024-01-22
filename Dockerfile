@@ -1,2 +1,2 @@
-FROM nginx
-COPY index.html /usr/share/nginx/html
+FROM tomcat:8
+COPY target/*.html /var/lib/jenkins/workspace/Group Project/dockeransible.war
