@@ -1,16 +1,15 @@
----
 - hosts: dev
   become: True
   tasks:
     - name: Install python pip
-      yum:
+      apt:
         name: python-pip
         state: present
     - name: Install docker
-      yum:
-        name: docker
+      apt:
+        name: docker.io
         state: present
-    - name: start docker
+    - name: start docker   
       service:
         name: docker
         state: started
@@ -22,7 +21,7 @@
     - name: Start the container
       docker_container:
         name: hariapp
-        image: "lutfil00/handson:{{DOCKER_TAG}}"
+        image: "lutfil00/hariapp:{{DOCKER_TAG}}"
         state: started
         published_ports:
-          - 0.0.0.0:8081:8080
+          0.0.0.0:8081:8080
