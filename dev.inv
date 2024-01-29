@@ -1,2 +1,2 @@
 [dev]
-10.0.10.7 ansible_user=admin ansible_ssh_pass=admin
+10.0.10.7 ansible_user=admin
