@@ -1,6 +1,6 @@
 ---
 - hosts: dev
-  become: False
+  become: True
   tasks:
     - name: Install python pip
       yum:
